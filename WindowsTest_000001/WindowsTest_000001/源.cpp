@@ -10,8 +10,33 @@ typedef NTSTATUS(NTAPI *QEURYINFORMATIONPROCESS)(IN HANDLE ProcessHandle,
 #define  pp  ;
 int main(int argc, wchar_t *argv[])
 {
-	STARTUPINFO startupinfo{ 0 };
-	PROCESS_INFORMATION processInformation{ 0 };
+	STARTUPINFO startupinfo{ 0 };//STARTUPINFO结构 该结构用于指定新进程的主窗口特性
+	PROCESS_INFORMATION processInformation{ 0 };//该结构返回有关新进程及其主线程的信息。其结构定义如下。
+	/*typedef struct_PROCESS_INFORMATION{
+
+HANDLE hProcess;
+
+HANDLE hThread;
+
+DWORD dwProcessId;
+
+DWORD dwThreadId;
+
+}PROCESS_INFORMATION;
+
+其中成员含义如下。
+
+① hProcess:返回新进程的句柄。
+
+② hThread:返回主线程的句柄。
+
+③ dwProcessId:返回一个全局进程标识符。该标识符用于标识一个进程。从进程被
+
+创建到终止，该值始终有效。
+
+④ dwThreadId:返回一个全局线程标识符。该标识符用于标识一个线程。从线程被创
+
+建到终止，该值始终有效。*/
 	BOOL bSuccess = CreateProcess(TEXT("C:\\Windows\\notepad.exe"), NULL,
 		NULL, NULL, FALSE, NULL, NULL, NULL, &startupinfo, &processInformation);
 	if (bSuccess)
