@@ -35,6 +35,18 @@
     <ClCompile Include="WindowsDx12.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="InitFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tol.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorOps.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xmvec3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsDx12.rc">

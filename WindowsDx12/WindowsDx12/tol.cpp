@@ -1,4 +1,3 @@
-/*
 #include <windows.h> // for XMVerifyCPUSupport
 #include <DirectXMath.h>
 #include <DirectXPackedVector.h>
@@ -34,4 +33,3 @@ int main()
     float powLU = powf(LU, 1.0e6f);
     cout << "LU^(10^6) = " << powLU << endl;
 }
-*/
